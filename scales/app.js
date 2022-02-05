@@ -29,6 +29,8 @@ async function draw() {
 
   //append g
   const circlesGroup = svg.append('g')
+    .style('font-size', '16px')
+    .style('dominant-baseline', 'middle')
 
   //draw items
   circlesGroup.selectAll('circle')
@@ -46,6 +48,11 @@ async function draw() {
     .attr('y', d => universeScale(sizeAccessor(d)))
     .text(nameAccessor)
 
+    const axis = d3.axisLeft(universeScale)
+
+    svg.append('g')
+      .attr('transform', `translate(${dimensions.margin}, 0)`)
+      .call(axis)
 }
 
 draw()
