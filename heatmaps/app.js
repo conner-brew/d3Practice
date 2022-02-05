@@ -34,7 +34,7 @@ async function draw(el, scale) {
   else if(scale === 'quantize') {
     colorScale = d3.scaleQuantize()
       .domain(d3.extent(dataset))
-      .range(['white', 'pink', 'red'])
+      .range(d3.schemeReds[5])
   }
 
   //The quantile scale automatically defines buckets for color division
@@ -42,14 +42,14 @@ async function draw(el, scale) {
   else if(scale === 'quantile') {
     colorScale = d3.scaleQuantile()
       .domain(dataset)
-      .range(['white', 'pink', 'red'])
+      .range(d3.schemeReds[5])
   }
 
   //The threshold scale allows the user to specify the distribution of buckets
   else if(scale === 'threshold') {
     colorScale = d3.scaleThreshold()
       .domain([45200, 135600])
-      .range(['white', 'pink', 'red'])
+      .range(d3.schemeReds[3])
   }
 
   //initialize rectangles
