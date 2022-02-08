@@ -9,7 +9,20 @@
 </head>
 
 <body>
-  <div id="chart"></div>
+  <p style="margin-right: auto; margin-left: auto; text-align: center; font-size: 1.5rem;">
+    <strong>Distribution of Weather Conditions in New York Over 100 Days</strong>
+  </p>
+  <select id="metric">
+    <option value="humidity" selected>Humidity</option>
+    <option value="temperature">Temperature</option>
+    <option value="dewPoint">Dew Point</option>
+    <option value="windSpeed">Wind Speed</option>
+    <option value="cloudCover">Cloud Cover</option>
+    <option value="ozone">Ozone</option>
+  </select>
+
+  <div id="chart" style="margin-left: auto; margin-right: auto; text-align: center;"></div>
+
 
   <script src="https://d3js.org/d3.v6.min.js"></script>
   <script src="app.js"></script>

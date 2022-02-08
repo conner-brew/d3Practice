@@ -4,7 +4,7 @@ async function draw(el, scale) {
   dataset.sort((a,b) => a - b)
 
   //dimensions
-  let dimensions = {
+  var dimensions = {
     width: 600,
     height: 150,
   };
